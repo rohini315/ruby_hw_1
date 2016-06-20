@@ -22,11 +22,11 @@ end
 big_function(num)
 
 #Bullet III
-def arrays_to_hash(n,m)
+def arrays_to_hash(array1,array2)
  myhash=Hash.new
- myhash[n[0]]=m[0]
- myhash[n[1]]=m[1]
- myhash[n[2]]=m[2]
+ for i in 0...array1.length
+ myhash[array1[i]]=array2[i]
+end
  puts myhash
 end
 
