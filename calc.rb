@@ -35,6 +35,9 @@ class Elevator
 
 	def initialize(floor)
 		@floor=floor
+
+			
+
 	end
 
 	def up(num)
@@ -46,14 +49,21 @@ class Elevator
 	end
 
 	def greet 
+		if floor ==-1 
+			puts "You're at the basement"
+		elsif floor < -1
+			puts "You're on the bottom most floor! "
+		elsif floor > 40
+			puts "You're Already at the top floor!"
+		else
 		puts "Your on #{@floor} floor"
-		
+		end	
 	end
 end
 
 new_elevator=Elevator.new(0)
-puts new_elevator.up(10)
-puts new_elevator.down(3)
+new_elevator.up(2)
+new_elevator.down(100)
 new_elevator.greet
 
 
