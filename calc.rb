@@ -59,11 +59,16 @@ class Elevator
 		puts "Your on #{@floor} floor"
 		end	
 	end
+
+	def music 
+		`open https://www.youtube.com/watch?v=S5PvBzDlZGs`
+	end
 end
 
 new_elevator=Elevator.new(0)
 new_elevator.up(2)
 new_elevator.down(100)
 new_elevator.greet
+new_elevator.music
 
 
